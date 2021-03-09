@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         
         br = new MyReceiver();
-        ifter = new IntentFilter("com.example.servicehomes.MyService");
+        ifter = new IntentFilter("com.example.nirjon.demoservice.PrimalityService");
         registerReceiver(br, ifter);
     }
 
