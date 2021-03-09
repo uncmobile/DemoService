@@ -8,10 +8,17 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    BroadcastReceiver br = null;
+    IntentFilter ifter = null;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        br = new MyReceiver();
+        ifter = new IntentFilter("com.example.servicehomes.MyService");
+        registerReceiver(br, ifter);
     }
 
     public void foo(View v)
